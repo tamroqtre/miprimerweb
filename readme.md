@@ -1,0 +1,1 @@
+Este proyecto es una página web para venta de productos de anime, desarrollada como parte del curso de Front-End. Estructurada a partir de un archivo HTML, utilizando CSS para su estética y complementada con atributos JavaScript.
