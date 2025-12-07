@@ -40,13 +40,45 @@ function insertarProductos() {
             <img src="${productoActual.imagen}" class="card-img" alt="${productoActual.alt}">
             <div class="producto-detalle">
                 <h3>${productoActual.nombre}</h3>
-                <p>${productoActual.descripcion}</p>
+                <p>
+                    <a class="link-opacity-50-hover" href="#." data-descripcion="${productoActual.descripcion}">Ver descripción</a>
+                </p>
+                <div class="descripcion">
+                </div>
                 <p>${productoActual.precio}</p>
-                <button aria-label="Agregar al carrito">Agregar al carrito</button>
+                <button type="button" class="btn-producto" aria-label="Agregar al carrito">Agregar al carrito</button>
             </div>`
-        
+
         contenedorProductos.appendChild(nuevoElemento);
     }
 }
 
-insertarProductos()
+function mostrarDescripcion(datoEvento) {
+
+    const elementoEvento = datoEvento.target.tagName
+    if (elementoEvento == "A") {
+
+        const elementoClicado = datoEvento.target;
+        const descripcionProducto = elementoClicado.dataset.descripcion;
+        const divProducto = elementoClicado.closest(".producto");
+        const divDescripcion = divProducto.querySelector(".descripcion");
+
+        if (divDescripcion.children.length == 0) {
+            const parrafoDescripcion = document.createElement("p");
+            parrafoDescripcion.textContent = descripcionProducto;
+            divDescripcion.appendChild(parrafoDescripcion);
+            elementoClicado.textContent = "Ocultar descripción";
+        }
+        else {
+            elementoClicado.textContent = "Mostrar descripción";
+            divDescripcion.innerHTML = "";
+        }
+    }
+};
+
+
+insertarProductos();
+
+const contenedorVerMas = document.querySelector(".producto-contenedor");
+
+contenedorVerMas.addEventListener("click", mostrarDescripcion);

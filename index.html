@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AkibaCrew - Tienda de productos de anime. Figuras, accesorios y más." />
     <meta name="keywords" content="anime, figuras, Akihabara, pop mart, banpresto, tienda anime" />
     <meta name="author" content="Tamara Roquigny Trejo" />
@@ -39,14 +39,6 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-
-        <!--Carrito resumen en header-->
-        <div class="header-actions" aria-hidden="false">
-            <button id="btn-open-cart" class="cart-btn" aria-label="Abrir carrito">
-                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                <span id="cart-count" aria-live="polite">0</span>
-            </button>
-        </div>
     </header>
 
     <main>
@@ -73,18 +65,52 @@
                     una
                     mezcla entre creatividad, nostalgia y rebeldía.<br><br>
                     Nuestro objetivo es acercarte un pedacito del espíritu japonés, con diseño, calidad y una estética
-                    moderna que combina lo kawaii y lo urbano.</br><br>
+                    moderna que combina lo kawaii y lo urbano.<br><br>
                     Bienvenidx a AkibaCrew.<br>
                     Donde el anime y la calle se encuentran. 🕶️🎌
                 </p>
             </div>
         </section>
 
-        <!--Procutos-->
+        <!--Carrito-->
+        <section id="carrito" style="background: #f7c1dc;">
+            <div class="container p-4 rounded-4 shadow-sm" style="background: #f7c1dc;">
+                <!-- Header del carrito -->
+                <div class="d-flex gap-2 mt-2 mb-2 align-items-center justify-content-between">
+                    <h2 class="m-0 fw-bold">Carrito de Compras</h2>
+
+                    <span
+                        class="badge bg-danger position-relative p-3 rounded-circle d-flex align-items-center justify-content-between shadow-sm">
+                        <i class="fa-solid fa-cart-shopping fs-5 text-white"></i>
+
+                        <span
+                            class="contador position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-dark shadow-sm">
+                            0
+                        </span>
+                    </span>
+                </div>
+
+                <!-- Lista de productos -->
+                <div class="row">
+                    <div class="col">
+                        <ul class="list-group mb-4">
+                            <!-- Productos seleccionados -->
+                        </ul>
+
+                        <button type="button" class="vaciarCarrito btn btn-dark btn-lg px-4 py-2 rounded-3 shadow-sm">
+                            Vaciar Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Productos-->
         <section id="productos">
             <h2>Productos</h2>
             <div class="producto-contenedor">
-                
+
             </div>
         </section>
 
@@ -166,7 +192,7 @@
             <a href="https://www.tiktok.com/@AkibaCrew" target="_blank">
                 <i class="fa-brands fa-tiktok"></i>
             </a>
-            <a href="https://www.threads.com/@AkibaCrew">
+            <a href="https://www.threads.net/@AkibaCrew">
                 <i class="fa-brands fa-threads"></i>
             </a>
         </div>
