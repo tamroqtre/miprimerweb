@@ -24,5 +24,13 @@
       "imagen": "./imagenes/productos/tokito-banpresto.webp",
       "alt": "Figura Banpresto de Tokito (Kimetsu no Yaiba)"
     }
+    {
+      "id": 4,
+      "nombre": "Pop Mart - Genshin",
+      "descripcion": "Colección de 12 figuras. Marca Pop Mart. Tamaño: 6x8cm. Material: PVC/ABS.",
+      "precio": 120000,
+      "imagen": "./imagenes/productos/",
+      "alt": "Figura Banpresto de Tokito (Kimetsu no Yaiba)"
+    }
   ]
 }
