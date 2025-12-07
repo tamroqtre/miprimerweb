@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <meta name="description" content="AkibaCrew - Tienda de productos de anime. Figuras, accesorios y más." />
+    <meta name="keywords" content="anime, figuras, Akihabara, pop mart, banpresto, tienda anime" />
+    <meta name="author" content="Tamara Roquigny Trejo" />
     <!---Iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -15,6 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 
     <title>AkibaCrew</title>
@@ -34,6 +39,14 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+
+        <!--Carrito resumen en header-->
+        <div class="header-actions" aria-hidden="false">
+            <button id="btn-open-cart" class="cart-btn" aria-label="Abrir carrito">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <span id="cart-count" aria-live="polite">0</span>
+            </button>
+        </div>
     </header>
 
     <main>
@@ -71,36 +84,7 @@
         <section id="productos">
             <h2>Productos</h2>
             <div class="producto-contenedor">
-                <article class="producto">
-                    <img src="./imagenes/productos/pop-mart-kimetsu.jpg" alt="">
-                    <div class="producto-detalle">
-                        <h3>Pop Mart - Kimetsu no Yaiba</h3>
-                        <p>Colección de 13 figuras. Marca: Pop Mart.
-                            Tamaño: 6*8cm Material: PVC/ABS.</p>
-                        <p>$400.000,00</p>
-                        <button aria-label="Agregar Pop Mart - Kimetsu no Yaiba al carrito">Agregar al carrito</button>
-                    </div>
-                </article>
-                <article class="producto">
-                    <img src="./imagenes/productos/douma-figure.webp" alt="">
-                    <div class="producto-detalle">
-                        <h3>Chokonose - Douma - Kimetsu no Yaiba</h3>
-                        <p>Figura Douma. Marca Sega. Tamaño: 9*12cm. Material:
-                            PVC/ABS.</p>
-                        <p>$252.300,00</p>
-                        <button aria-label="Agregar Douma al carrito">Agregar al carrito</button>
-                    </div>
-                </article>
-                <article class="producto">
-                    <img src="./imagenes/productos/tokito-banpresto.webp" alt="">
-                    <div class="producto-detalle">
-                        <h3>Banpresto - Tokito - Kimetsu no Yaiba</h3>
-                        <p>Figura Tokito. Marca Banpresto. Tamaño: 16cm. Material: PVC/ABS.
-                        </p>
-                        <p>$95.999,00</p>
-                        <button aria-label="Agregar Tokito al carrito">Agregar al carrito</button>
-                    </div>
-                </article>
+                
             </div>
         </section>
 
@@ -188,6 +172,9 @@
         </div>
     </footer>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
